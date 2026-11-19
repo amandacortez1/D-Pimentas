@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio | Restaurante</title>
+  <link rel="stylesheet" href="cardapio.css">
+</head>
+<body>
+  <header>
+    <img src="logo.jpg" alt="Logo esquerda" class="logo esquerda">
+    <h1>Cardápio do Restaurante</h1>
+  </header>
+
+  <style>
+  body {
+    background-image: url('fundov.jpg');
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center; 
+  }
+</style>
+
+  <section class="carrossel">
+      <img src="prato1.jpg" alt="Prato 1">
+      <img src="prato2.jpg" alt="Prato 2">
+      <img src="prato3.jpg" alt="Prato 3">
+      <img src="prato4.jpg" alt="Prato 4">
+  </section>
+
+  <main>
+    <section class="marmitex">
+      <h2>Prato Feito</h2>
+      <p>Escolha o prato ideal para você:</p>
+      <div class="opcoes">
+        <label for="prato">Pratos:</label>
+        <select id="prato">
+          <option value="nenhuma_opção">Nenhuma opção</option>
+          <option value="simples">Prato Simples - R$ 18,00</option>
+          <option value="bife">Prato Bife - R$ 22,00</option>
+          <option value="completo">Prato Completo - R$ 25,00</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="marmitex">
+      <h2>Marmitex</h2>
+      <p>Escolha o tamanho ideal para você:</p>
+      <div class="opcoes">
+        <label for="tamanho">Tamanho:</label>
+        <select id="tamanho">
+          <option value="nenhuma_opção">Nenhuma opção</option>
+          <option value="pequena">Pequena - R$ 18,00</option>
+          <option value="media">Média - R$ 22,00</option>
+          <option value="grande">Grande - R$ 25,00</option>
+        </select>
+      </div>
+
+      <div class="opcoes">
+        <label for="mistura">Mistura:</label>
+        <select id="mistura">
+          <option value="nenhuma_opção">Nenhuma opção</option>
+          <option value="mistura1">1- Arroz branco, Feijão carioca, Farofa a moda da casa, Repolho refogado, Frango a passarinho, Carne moída com batata, Calabresa acebolada</option>
+          <option value="mistura2">2- Arroz branco, Feijão carioca, Farofa a moda da casa, Feijoada Dpimentas, Torresmo, Couve refogada, Bife de pernil acebolado, Calabresa acebolada</option>
+          <option value="mistura3">3- Arroz branco, Feijão carioca, Farofa a moda da casa, Purê de batata, Batata palha, Strogonoff de frango, Filé de peixe frito empanado, Linguiça assada toscana</option>
+          <option value="mistura4">4- Arroz branco, Feijão carioca, Farofa a moda da casa, Arroz temperado, Batata na manteiga, Almôndegas, Frango a passarinho, Calabresa acebolada</option>
+          <option value="mistura5">5- Arroz branco, Feijão carioca, Farofa a moda da casa, Cenoura refogada, Carne de panela, Pernil ao molho barbecue, Calabresa acebolada</option>
+          <option value="mistura6">6- Arroz branco, Feijão carioca, Farofa a moda da casa, Creme de milho, Batata palha, Strogonoff de carne, Filé de frango grelhado, Linguiça Toscana</option>
+        </select>
+      </div>
+
+     <div class="opcoes">
+       <label for="troca2">Troque a mistura:</label>
+       <select id="troca2">
+        <option value="nenhuma_opção">Nenhuma opção</option>
+         <option value="carne_moída">1- Carne moída com batata</option>
+         <option value="bife_pernil">2- Bife de pernil acebolado</option>
+         <option value="filé_peixe">3- Filé de peixe frito empanado</option>
+         <option value="frango_passarinho">4- Frango a passarinho</option>
+         <option value="pernil_molho">5- Pernil ao molho barbecue</option>
+         <option value="frango_grelhado">6- Filé de frango grelhado</option>
+  </select>
+    </div>
+
+      <div class="opcoes">
+        <label for="troca">Troque por outra opção:</label>
+        <select id="troca">
+          <option value="nenhuma_opção">Nenhuma opção</option>
+          <option value="ovo">Ovo frito</option>
+          <option value="omelete">Omelete simples</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="bebidas">
+      <h2>Bebidas</h2>
+      <div class="opcoes">
+        <label for="bebida">Escolha sua bebida:</label>
+        <select id="bebida">
+          <option value="nenhuma_opção">Nenhuma opção</option>
+          <option value="refri_lata">Refrigerante Lata - R$ 5,00</option>
+          <option value="refri_600">Refrigerante 600ml - R$ 7,00</option>
+          <option value="refri_litro">Refrigerante 1 Litro - R$ 9,00</option>
+          <option value="refri_coca">Refrigerante 2 Litros Coca-Cola - R$ 15,00</option>
+        </select>
+      </div>
+    </section>
+
+    <div class="botao-pedido">
+      <a href="delivery.html" class="btn">Fazer Pedido</a>
+      <a href="index.html" class="btn-voltar">Voltar</a>
+    </div>
+  </main>
+
+  
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const modoEdicao =
+        new URLSearchParams(window.location.search).get("modo") === "editar";
+
+    const chave = "dpimentas_cardapio_edicao";
+    const seletores = document.querySelectorAll("main select");
+    const titulos = document.querySelectorAll("main h2");
+    const paragrafos = document.querySelectorAll("main .marmitex > p");
+
+    let dadosSalvos = {};
+
+    try {
+        dadosSalvos = JSON.parse(localStorage.getItem(chave)) || {};
+    } catch (erro) {
+        dadosSalvos = {};
+    }
+
+    // Aplica os textos salvos quando a página abre.
+    function aplicarDados() {
+        seletores.forEach((select) => {
+            const opcoesSalvas = dadosSalvos[select.id];
+
+            if (!opcoesSalvas) return;
+
+            select.querySelectorAll("option").forEach((opcao, indice) => {
+                if (opcoesSalvas[indice] !== undefined) {
+                    opcao.textContent = opcoesSalvas[indice];
+                }
+            });
+        });
+
+        titulos.forEach((titulo, indice) => {
+            if (dadosSalvos["titulo_" + indice] !== undefined) {
+                titulo.textContent = dadosSalvos["titulo_" + indice];
+            }
+        });
+
+        paragrafos.forEach((paragrafo, indice) => {
+            if (dadosSalvos["descricao_" + indice] !== undefined) {
+                paragrafo.textContent = dadosSalvos["descricao_" + indice];
+            }
+        });
+    }
+
+    aplicarDados();
+
+    if (!modoEdicao) return;
+
+    // Cria o painel administrativo.
+    const painel = document.createElement("section");
+    painel.className = "editor-cardapio";
+
+    painel.innerHTML = `
+        <h2>Editar cardápio</h2>
+        <p>Altere os nomes, descrições, opções e preços nos campos abaixo.</p>
+        <div id="campos-edicao"></div>
+        <div class="acoes-edicao">
+            <button type="button" id="salvar-cardapio">
+                Salvar alterações
+            </button>
+            <button type="button" id="restaurar-cardapio">
+                Restaurar cardápio original
+            </button>
+            <a href="administrativo.html">Voltar ao painel</a>
+        </div>
+        <p id="status-salvamento" role="status"></p>
+    `;
+
+    document.querySelector("main").prepend(painel);
+
+    const campos = painel.querySelector("#campos-edicao");
+
+    // Cria campos editáveis para cada opção dos seletores.
+    seletores.forEach((select) => {
+        const grupo = document.createElement("fieldset");
+        const legenda = document.createElement("legend");
+        legenda.textContent =
+            select.labels?.[0]?.textContent || select.id;
+
+        grupo.appendChild(legenda);
+
+        select.querySelectorAll("option").forEach((opcao, indice) => {
+            const rotulo = document.createElement("label");
+            rotulo.textContent = "Opção " + (indice + 1);
+
+            const campo = document.createElement("input");
+            campo.type = "text";
+            campo.value = opcao.textContent;
+            campo.dataset.seletor = select.id;
+            campo.dataset.indice = indice;
+
+            rotulo.appendChild(campo);
+            grupo.appendChild(rotulo);
+        });
+
+        campos.appendChild(grupo);
+    });
+
+    // Permite editar os títulos e as descrições das seções.
+    function criarCampoTexto(rotuloTexto, chaveDado, textoAtual) {
+        const grupo = document.createElement("fieldset");
+        const legenda = document.createElement("legend");
+        legenda.textContent = rotuloTexto;
+
+        const campo = document.createElement("input");
+        campo.type = "text";
+        campo.value = textoAtual;
+        campo.dataset.chaveTexto = chaveDado;
+
+        grupo.append(legenda, campo);
+        campos.prepend(grupo);
+    }
+
+    titulos.forEach((titulo, indice) => {
+        criarCampoTexto(
+            "Título da seção",
+            "titulo_" + indice,
+            titulo.textContent
+        );
+    });
+
+    paragrafos.forEach((paragrafo, indice) => {
+        criarCampoTexto(
+            "Descrição da seção",
+            "descricao_" + indice,
+            paragrafo.textContent
+        );
+    });
+
+    // Salva as alterações neste navegador.
+    painel.querySelector("#salvar-cardapio").addEventListener("click", () => {
+        const novosDados = {};
+
+        campos.querySelectorAll("input").forEach((campo) => {
+            if (campo.dataset.seletor) {
+                const id = campo.dataset.seletor;
+                const indice = campo.dataset.indice;
+
+                if (!novosDados[id]) novosDados[id] = [];
+                novosDados[id][indice] = campo.value;
+            } else if (campo.dataset.chaveTexto) {
+                novosDados[campo.dataset.chaveTexto] = campo.value;
+            }
+        });
+
+        try {
+            localStorage.setItem(chave, JSON.stringify(novosDados));
+            dadosSalvos = novosDados;
+            aplicarDados();
+
+            painel.querySelector("#status-salvamento").textContent =
+                "Alterações salvas neste navegador!";
+        } catch (erro) {
+            painel.querySelector("#status-salvamento").textContent =
+                "Não foi possível salvar. Verifique o armazenamento do navegador.";
+        }
+    });
+
+    // Restaura as opções originais do HTML.
+    painel.querySelector("#restaurar-cardapio").addEventListener("click", () => {
+        const confirmar = window.confirm(
+            "Deseja apagar as alterações salvas e voltar aos textos originais?"
+        );
+
+        if (!confirmar) return;
+
+        try {
+            localStorage.removeItem(chave);
+            window.location.reload();
+        } catch (erro) {
+            painel.querySelector("#status-salvamento").textContent =
+                "Não foi possível restaurar o cardápio.";
+        }
+    });
+});
+</script>
+</body>
+</html>
+
+
+  <footer>
+    <p>&copy;  Restaurante D' Pimentas.</p>
+  </footer>
+</body>
+</html>

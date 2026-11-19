@@ -1,0 +1,260 @@
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    color: #FFFFFF;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.72),
+                        rgba(0, 0, 0, 0.82)),
+        url("fundov.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* CABEÇALHO */
+.cabecalho {
+    width: 100%;
+    min-height: 80px;
+    padding: 20px 6%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    background: rgba(20, 20, 20, 0.92);
+    border-bottom: 2px solid #C1121F;
+}
+
+.logo {
+    color: #C1121F;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.botao-sair {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 18px;
+    border: 1px solid #C1121F;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.botao-sair:hover {
+    background-color: #C1121F;
+}
+
+/* CONTEÚDO PRINCIPAL */
+.conteudo {
+    width: 100%;
+    flex: 1;
+    padding: 60px 6%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.painel {
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px;
+
+    background: rgba(28, 28, 28, 0.94);
+    border: 1px solid rgba(193, 18, 31, 0.65);
+    border-radius: 12px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* APRESENTAÇÃO */
+.introducao {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.etiqueta {
+    display: inline-block;
+    color: #FFFFFF;
+    background-color: #8B0000;
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.introducao h1 {
+    color: #FFFFFF;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.introducao p {
+    color: #D0D0D0;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* CARTÕES DE OPÇÕES */
+.opcoes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.opcao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    padding: 30px 22px;
+    background: #252525;
+    border: 1px solid #444444;
+    border-radius: 10px;
+
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.opcao:hover {
+    transform: translateY(-5px);
+    border-color: #C1121F;
+}
+
+.icone {
+    font-size: 2.8rem;
+    margin-bottom: 18px;
+}
+
+.opcao h2 {
+    font-size: 1.35rem;
+    margin-bottom: 15px;
+    color: #FFFFFF;
+}
+
+.opcao p {
+    color: #CCCCCC;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* BOTÕES */
+.botao {
+    display: inline-block;
+    width: 100%;
+    margin-top: auto;
+    padding: 14px 12px;
+
+    background-color: #C1121F;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+
+    border-radius: 5px;
+    border: 1px solid #C1121F;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #8B0000;
+    border-color: #8B0000;
+}
+
+/* AVISO */
+.aviso {
+    margin-top: 35px;
+    padding: 18px 20px;
+
+    background: rgba(193, 18, 31, 0.12);
+    border-left: 4px solid #C1121F;
+    border-radius: 4px;
+}
+
+.aviso p {
+    color: #DDDDDD;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.aviso strong {
+    color: #FFFFFF;
+}
+
+/* RODAPÉ */
+.rodape {
+    padding: 22px;
+    text-align: center;
+    color: #BBBBBB;
+    background: rgba(20, 20, 20, 0.92);
+    border-top: 1px solid #444444;
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 900px) {
+    .opcoes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .opcao:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 600px) {
+    .cabecalho {
+        padding: 18px 5%;
+    }
+
+    .logo {
+        font-size: 1.6rem;
+    }
+
+    .botao-sair {
+        font-size: 0.85rem;
+        padding: 9px 12px;
+    }
+
+    .conteudo {
+        padding: 30px 5%;
+    }
+
+    .painel {
+        padding: 25px 18px;
+    }
+
+    .introducao h1 {
+        font-size: 2rem;
+    }
+
+    .introducao p {
+        font-size: 1rem;
+    }
+
+    .opcoes {
+        grid-template-columns: 1fr;
+    }
+
+    .opcao:last-child {
+        grid-column: auto;
+    }
+}
