@@ -44,9 +44,9 @@ Responsável pela modelagem, estruturação e alimentação do banco de dados re
 
 O projeto está dividido nas seguintes pastas:
 
-- site d pimentas: arquivos HTML, CSS, imagens e demais recursos utilizados no site.
+- site de pimentas: arquivos HTML, CSS, imagens e demais recursos utilizados no site.
 - java d pimentas: código-fonte Java, classes e pacotes do sistema.
-- banco de dados de pimentas: scripts SQL utilizados na estruturação e alimentação do banco de dados.
+- banco de dados d's: scripts SQL utilizados na estruturação e alimentação do banco de dados.
 
 6. Equipe e Gestão de Pessoas
 
