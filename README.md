@@ -115,4 +115,4 @@ O código-fonte e os arquivos desenvolvidos pela equipe estão disponíveis publ
 https://github.com/amandacortez1/D-Pimentas
 
 Projeto acadêmico – D'Pimentas  
-Desenvolvido em equipe como parte das atividades de Engenharia de Software.
+Desenvolvido em equipe.
