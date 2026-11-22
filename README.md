@@ -52,15 +52,15 @@ O projeto está dividido nas seguintes pastas:
 
 6.1 Identificação dos Integrantes e suas Funções
 
-Amanda – Desenvolvedora Front-End:** responsável pela criação e estilização das interfaces gráficas do sistema do restaurante, utilizando HTML e CSS no Visual Studio Code. Também participa da elaboração e preenchimento dos documentos do projeto.
+Amanda – Desenvolvedora Front-End: responsável pela criação e estilização das interfaces gráficas do sistema do restaurante, utilizando HTML e CSS no Visual Studio Code. Também participa da elaboração e preenchimento dos documentos do projeto.
 
-Aline – Desenvolvedora Front-End:** responsável pelo desenvolvimento e organização das páginas do sistema, trabalhando em conjunto na criação e estilização das interfaces utilizando HTML e CSS. Também participa da elaboração e preenchimento dos documentos do projeto.
+Aline – Desenvolvedora Front-End: responsável pelo desenvolvimento e organização das páginas do sistema, trabalhando em conjunto na criação e estilização das interfaces utilizando HTML e CSS. Também participa da elaboração e preenchimento dos documentos do projeto.
 
-Mateus – Arquiteto de Dados:** responsável pela modelagem e estruturação do banco de dados relacional, elaboração de scripts e consultas SQL, utilizando o Microsoft SQL Server e o SQL Server Management Studio. Também colabora na documentação do projeto.
+Mateus – Arquiteto de Dados: responsável pela modelagem e estruturação do banco de dados relacional, elaboração de scripts e consultas SQL, utilizando o Microsoft SQL Server e o SQL Server Management Studio. Também colabora na documentação do projeto.
 
-Rafaela – Analista de Banco de Dados (SQL):** responsável pela inserção e organização dos dados no banco de dados, utilizando comandos SQL, principalmente INSERT INTO. Realiza o preenchimento das tabelas de clientes, funcionários, entregadores, produtos, pedidos, entregas e contratos, respeitando os relacionamentos definidos.
+Rafaela – Analista de Banco de Dados (SQL): responsável pela inserção e organização dos dados no banco de dados, utilizando comandos SQL, principalmente INSERT INTO. Realiza o preenchimento das tabelas de clientes, funcionários, entregadores, produtos, pedidos, entregas e contratos, respeitando os relacionamentos definidos.
 
-Yasmin – Desenvolvedora Back-End:** responsável pela criação das classes e funcionalidades em Java para a construção do sistema de gestão, utilizando o Visual Studio Code e considerando a estrutura do banco de dados do projeto.
+Yasmin – Desenvolvedora Back-End: responsável pela criação das classes e funcionalidades em Java para a construção do sistema de gestão, utilizando o Visual Studio Code e considerando a estrutura do banco de dados do projeto.
 
 6.2 Qualificações Necessárias para Cada Função
 
