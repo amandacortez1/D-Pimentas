@@ -10,6 +10,7 @@ GO
 -- =====================================================
 -- 1. ESTRUTURA DE LOCALIZAÇÃO (UFs, Cidades e CEPs)
 -- =====================================================
+
 CREATE TABLE ufs
 (
     sigla                CHAR(02)                NOT NULL,
@@ -153,6 +154,7 @@ CREATE TABLE entregas
 );
 GO
 
+
 CREATE TABLE pedidos
 (
     nr                  INT                     NOT NULL    IDENTITY,
@@ -200,6 +202,7 @@ GO
 -- 5. TIPOS DE CONTRATO E FOLHA DE PAGAMENTO
 -- (criadas por último porque dependem de funcionarios)
 -- =====================================================
+
 CREATE TABLE tipos_contratos
 (
     codigo              INT                     NOT NULL    IDENTITY,

@@ -167,7 +167,6 @@ GO
 
 -- =============================================
 -- 18. FOLHA DE PAGAMENTO / CONTRATOS
--- Agora todos os funcionario_codigo (1,2,7,8,9,10) existem
 -- =============================================
 INSERT INTO folha_pagamento_contratos (
     funcionario_codigo,
